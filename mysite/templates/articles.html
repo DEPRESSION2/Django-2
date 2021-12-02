@@ -1,4 +1,19 @@
-{% extends 'base.html' %}
+{% extends "index.html" %}
+
 {% block content %}
-    <h1>ARTICLES ARTICLES ARTICLES ARTICLES ARTICLES</h1>
+<div class="article_style">
+    {% if idx|divisibleby:"2" %}
+    <span> The article is even </span>
+    {% else %}
+        <span> The article is odd </span>
+    {% endif %}
+    <br>
+    <span> Article number {{ idx }} </span>
+
+    {% if name %}
+    {% include "dep.html" %}
+    {% endif %}
+
+</div>
+
 {% endblock %}

@@ -1,13 +1,17 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Base</title>
 </head>
 <body>
-<div style="background-color: aqua">
+<div>
     {% block content %}
     {% endblock %}
 </div>
+<div>
+    <a href="{% url 'index' %}">Main page</a>
+</div>
+
 </body>
 </html>

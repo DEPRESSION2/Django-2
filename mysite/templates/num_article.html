@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
     {% if check == 0 %}
-        <span>Чётное</span>
+        <span>Even</span>
         {% else %}
-        <span>Не чётное</span>
+        <span>not even</span>
     {% endif %}
     <div>
     {% include 'add.html' with text=text %}

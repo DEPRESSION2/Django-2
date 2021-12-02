@@ -1,9 +1,30 @@
-{% extends 'base.html' %}
-{% block content %}
-    <div>
-    <a href="{% url 'random_page' %}">Random article</a>
-    </div>
-    <div>
-    <a href="{% url 'random_slug' %}">Random slug article</a>
-    </div>
-{% endblock %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
+</head>
+<body>
+<div>
+    {% block content %}
+    {% endblock %}
+</div>
+
+
+<div class="first">
+    <a href="http://127.0не Чётное .0.1:8000/articles/{% now 'u' %}">Random article</a>
+</div>
+<div class="two">
+    <a href="http://127.0.0.1:8000/articles/{% now 'u' %}/{% lorem 1 w random %}-{% lorem 1 w random %}">Random article</a>
+</div>
+
+
+<div class="three">
+    <a href="{% url 'index' %}">Home page</a>
+</div>
+
+</body>
+</html>
+
